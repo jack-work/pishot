@@ -1,0 +1,12 @@
+{
+  "name": "pishot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Minimal browser and desktop screenshot tools for pi",
+  "pi": {
+    "skills": ["./"]
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}
