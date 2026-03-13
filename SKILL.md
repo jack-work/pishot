@@ -10,12 +10,15 @@ Minimal CDP tools for browser interaction and desktop screenshots on Linux/Wayla
 ## Desktop Screenshot
 
 ```bash
-pishot-desktop.sh                  # Full screen
-pishot-desktop.sh --region         # Select a region interactively
+pishot-desktop.sh                  # All monitors stitched together
+pishot-desktop.sh --focused        # Monitor containing the focused window
+pishot-desktop.sh --output DP-2    # Specific monitor by name
 pishot-desktop.sh --active         # Active window only
+pishot-desktop.sh --region         # Select a region with mouse
+pishot-desktop.sh --list           # List available monitors
 ```
 
-Captures the screen via `grim`/`slurp` (Wayland). Returns a temp file path. Use `read` to view the image.
+Captures the screen via `grim`/`slurp` (Wayland). Returns a temp file path. Use `read` to view the image. Use `--list` first to discover monitor names, then `--output <name>` or `--focused` to target one.
 
 ## Start Browser
 
